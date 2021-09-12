@@ -1,6 +1,6 @@
 local Libary = {}
 
-local function CreateLoadingScreen(ParentGui ,Title, BGC)
+function Libary.CreateLoadingScreen(ParentGui ,Title, BGC)
 	local MainFrame = Instance.new("Frame")
 	local UICorner = Instance.new("UICorner")
 	local Title = Instance.new("TextLabel")
