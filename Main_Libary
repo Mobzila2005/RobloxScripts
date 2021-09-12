@@ -1,6 +1,10 @@
 local Libary = {}
 
 local function CreateLoadingScreen(ParentGui ,Title, BGC)
+	print("Function called")
+	print(ParentGui)
+	print(Title)
+	print(BGC)
 	local MainFrame = Instance.new("Frame")
 	local UICorner = Instance.new("UICorner")
 	local Title = Instance.new("TextLabel")
