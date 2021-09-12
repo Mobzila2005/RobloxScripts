@@ -1,6 +1,6 @@
 local Libary = {}
 
-local function CreateLoadingScreen(ParentGui ,Title, BGC)
+function CreateLoadingScreen(ParentGui ,Title, BGC)
 	print("Function called")
 	print(ParentGui)
 	print(Title)
