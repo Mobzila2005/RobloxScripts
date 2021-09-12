@@ -1,23 +1,22 @@
 local Libary = {}
 
-function Libary.CreateLoadingScreen(ParentGui ,Title, BGC)
-	print("Function called")
-	print(ParentGui)
-	print(Title)
-	print(BGC)
+local function CreateLoadingScreen(ParentGui ,Title, BGC)
 	local MainFrame = Instance.new("Frame")
 	local UICorner = Instance.new("UICorner")
 	local Title = Instance.new("TextLabel")
+	local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
 	local LoadingBar = Instance.new("Frame")
 	local UICorner_2 = Instance.new("UICorner")
 	local Bar = Instance.new("Frame")
 	local UICorner_3 = Instance.new("UICorner")
 	local Percent = Instance.new("TextLabel")
+	local UITextSizeConstraint_2 = Instance.new("UITextSizeConstraint")
 	local Indicator = Instance.new("TextLabel")
+	local UITextSizeConstraint_3 = Instance.new("UITextSizeConstraint")
 	
 	MainFrame.Name = "MainFrame"
-	MainFrame.Parent = ParentGui
-	MainFrame.BackgroundColor3 = BGC
+	MainFrame.Parent = game.StarterGui.asdas
+	MainFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 	MainFrame.Position = UDim2.new(0.399684042, 0, 0.391653299, 0)
 	MainFrame.Size = UDim2.new(0.200631917, 0, 0.215088278, 0)
 
@@ -30,11 +29,14 @@ function Libary.CreateLoadingScreen(ParentGui ,Title, BGC)
 	Title.Position = UDim2.new(0.106299214, 0, 0.0522388071, 0)
 	Title.Size = UDim2.new(0.787401557, 0, 0.291044772, 0)
 	Title.Font = Enum.Font.RobotoMono
-	Title.Text = Title
+	Title.Text = "RayS_DeathGui"
 	Title.TextColor3 = Color3.fromRGB(255, 255, 255)
 	Title.TextScaled = true
 	Title.TextSize = 14.000
 	Title.TextWrapped = true
+
+	UITextSizeConstraint.Parent = Title
+	UITextSizeConstraint.MaxTextSize = 32
 
 	LoadingBar.Name = "LoadingBar"
 	LoadingBar.Parent = MainFrame
@@ -69,6 +71,9 @@ function Libary.CreateLoadingScreen(ParentGui ,Title, BGC)
 	Percent.TextTransparency = 0.460
 	Percent.TextWrapped = true
 
+	UITextSizeConstraint_2.Parent = Percent
+	UITextSizeConstraint_2.MaxTextSize = 30
+
 	Indicator.Name = "Indicator"
 	Indicator.Parent = MainFrame
 	Indicator.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -83,6 +88,9 @@ function Libary.CreateLoadingScreen(ParentGui ,Title, BGC)
 	Indicator.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
 	Indicator.TextStrokeTransparency = 0.750
 	Indicator.TextWrapped = true
+
+	UITextSizeConstraint_3.Parent = Indicator
+	UITextSizeConstraint_3.MaxTextSize = 29
 	
 	local Background = MainFrame
 	local bar = LoadingBar
