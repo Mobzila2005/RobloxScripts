@@ -1,6 +1,6 @@
 local Libary = {}
 
-local function CreateLoadingScreen(Title, BGC)
+local function CreateLoadingScreen(ParentGui ,Title, BGC)
 	local MainFrame = Instance.new("Frame")
 	local UICorner = Instance.new("UICorner")
 	local Title = Instance.new("TextLabel")
@@ -12,6 +12,7 @@ local function CreateLoadingScreen(Title, BGC)
 	local Indicator = Instance.new("TextLabel")
 	
 	MainFrame.Name = "MainFrame"
+	MainFrame.Parent = ParentGui
 	MainFrame.BackgroundColor3 = BGC
 	MainFrame.Position = UDim2.new(0.399684042, 0, 0.391653299, 0)
 	MainFrame.Size = UDim2.new(0.200631917, 0, 0.215088278, 0)
