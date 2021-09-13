@@ -27,6 +27,7 @@ function Libary:CreateLoadingScreen(title, BGC)
 	MainFrame.BackgroundColor3 = BGC
 	MainFrame.Position = UDim2.new(0.399684042, 0, 0.391653299, 0)
 	MainFrame.Size = UDim2.new(0.200631917, 0, 0.215088278, 0)
+	MainFrame.Draggable = true
 
 	UICorner.Parent = MainFrame
 
