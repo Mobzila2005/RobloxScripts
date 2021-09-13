@@ -131,3 +131,5 @@ function Libary:CreateLoadingScreen(title, BGC)
 		end
 	end
 end
+
+return Libary
