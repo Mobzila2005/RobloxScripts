@@ -1,107 +1,114 @@
 local Libary = {}
 
-function Libary.CreateLoadingScreen(ParentGui ,Title, BGC)
-	local MainFrame = Instance.new("Frame")
-	local UICorner = Instance.new("UICorner")
-	local Title = Instance.new("TextLabel")
-	local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
-	local LoadingBar = Instance.new("Frame")
-	local UICorner_2 = Instance.new("UICorner")
-	local Bar = Instance.new("Frame")
-	local UICorner_3 = Instance.new("UICorner")
-	local Percent = Instance.new("TextLabel")
-	local UITextSizeConstraint_2 = Instance.new("UITextSizeConstraint")
-	local Indicator = Instance.new("TextLabel")
-	local UITextSizeConstraint_3 = Instance.new("UITextSizeConstraint")
-	
-	print("Libary Loaded and LoadingScreen got Called!")
-	print(ParentGui)
-	print(Title)
-	print(BGC)
-	
-	MainFrame.Name = "MainFrame"
-	MainFrame.Parent = ParentGui
-	MainFrame.BackgroundColor3 = BGC
-	MainFrame.Position = UDim2.new(0.399684042, 0, 0.391653299, 0)
-	MainFrame.Size = UDim2.new(0.200631917, 0, 0.215088278, 0)
+function Libary.CreateLoadingScreen(Title, BGC)
+	local LoadingScreen = Instance.new("ScreenGui")
+local MainFrame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local Title = Instance.new("TextLabel")
+local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
+local LoadingBar = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
+local Bar = Instance.new("Frame")
+local UICorner_3 = Instance.new("UICorner")
+local Percent = Instance.new("TextLabel")
+local UITextSizeConstraint_2 = Instance.new("UITextSizeConstraint")
+local Indicator = Instance.new("TextLabel")
+local UITextSizeConstraint_3 = Instance.new("UITextSizeConstraint")
 
-	UICorner.Parent = MainFrame
+--Properties:
 
-	Title.Name = "Title"
-	Title.Parent = MainFrame
-	Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	Title.BackgroundTransparency = 1.000
-	Title.Position = UDim2.new(0.106299214, 0, 0.0522388071, 0)
-	Title.Size = UDim2.new(0.787401557, 0, 0.291044772, 0)
-	Title.Font = Enum.Font.RobotoMono
-	Title.Text = Title
-	Title.TextColor3 = Color3.fromRGB(255, 255, 255)
-	Title.TextScaled = true
-	Title.TextSize = 14.000
-	Title.TextWrapped = true
+LoadingScreen.Name = "LoadingScreen"
+LoadingScreen.Parent = game.CoreGui
+LoadingScreen.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-	UITextSizeConstraint.Parent = Title
-	UITextSizeConstraint.MaxTextSize = 32
+MainFrame.Name = "MainFrame"
+MainFrame.Parent = LoadingScreen
+MainFrame.BackgroundColor3 = BGC
+MainFrame.Position = UDim2.new(0.399684042, 0, 0.391653299, 0)
+MainFrame.Size = UDim2.new(0.200631917, 0, 0.215088278, 0)
 
-	LoadingBar.Name = "LoadingBar"
-	LoadingBar.Parent = MainFrame
-	LoadingBar.BackgroundColor3 = Color3.fromRGB(125, 125, 125)
-	LoadingBar.BackgroundTransparency = 0.500
-	LoadingBar.BorderColor3 = Color3.fromRGB(255, 255, 255)
-	LoadingBar.Position = UDim2.new(0.027559055, 0, 0.694029868, 0)
-	LoadingBar.Size = UDim2.new(0.948818922, 0, 0.223880604, 0)
+UICorner.Parent = MainFrame
 
-	UICorner_2.Parent = LoadingBar
+Title.Name = "Title"
+Title.Parent = MainFrame
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1.000
+Title.Position = UDim2.new(0.106299214, 0, 0.0522388071, 0)
+Title.Size = UDim2.new(0.787401557, 0, 0.291044772, 0)
+Title.Font = Enum.Font.RobotoMono
+Title.Text = Title
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextScaled = true
+Title.TextSize = 14.000
+Title.TextWrapped = true
 
-	Bar.Name = "Bar"
-	Bar.Parent = LoadingBar
-	Bar.BackgroundColor3 = Color3.fromRGB(56, 170, 0)
-	Bar.Size = UDim2.new(0, 0, 1, 0)
+UITextSizeConstraint.Parent = Title
+UITextSizeConstraint.MaxTextSize = 32
 
-	UICorner_3.Parent = Bar
+LoadingBar.Name = "LoadingBar"
+LoadingBar.Parent = MainFrame
+LoadingBar.BackgroundColor3 = Color3.fromRGB(125, 125, 125)
+LoadingBar.BackgroundTransparency = 0.500
+LoadingBar.BorderColor3 = Color3.fromRGB(255, 255, 255)
+LoadingBar.Position = UDim2.new(0.027559055, 0, 0.694029868, 0)
+LoadingBar.Size = UDim2.new(0.948818922, 0, 0.223880604, 0)
 
-	Percent.Name = "Percent"
-	Percent.Parent = LoadingBar
-	Percent.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	Percent.BackgroundTransparency = 1.000
-	Percent.Position = UDim2.new(0.0829875544, 0, 0, 0)
-	Percent.Size = UDim2.new(0.829875529, 0, 1, 0)
-	Percent.Font = Enum.Font.SourceSans
-	Percent.Text = "0%"
-	Percent.TextColor3 = Color3.fromRGB(255, 255, 255)
-	Percent.TextScaled = true
-	Percent.TextSize = 14.000
-	Percent.TextStrokeColor3 = Color3.fromRGB(99, 99, 99)
-	Percent.TextStrokeTransparency = 0.000
-	Percent.TextTransparency = 0.460
-	Percent.TextWrapped = true
+UICorner_2.Parent = LoadingBar
 
-	UITextSizeConstraint_2.Parent = Percent
-	UITextSizeConstraint_2.MaxTextSize = 30
+Bar.Name = "Bar"
+Bar.Parent = LoadingBar
+Bar.BackgroundColor3 = Color3.fromRGB(56, 170, 0)
+Bar.Size = UDim2.new(0, 0, 1, 0)
 
-	Indicator.Name = "Indicator"
-	Indicator.Parent = MainFrame
-	Indicator.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	Indicator.BackgroundTransparency = 1.000
-	Indicator.Position = UDim2.new(0.153543308, 0, 0.425373137, 0)
-	Indicator.Size = UDim2.new(0.688976407, 0, 0.216417909, 0)
-	Indicator.Font = Enum.Font.SourceSans
-	Indicator.Text = "Loading..."
-	Indicator.TextColor3 = Color3.fromRGB(255, 255, 255)
-	Indicator.TextScaled = true
-	Indicator.TextSize = 14.000
-	Indicator.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-	Indicator.TextStrokeTransparency = 0.750
-	Indicator.TextWrapped = true
+UICorner_3.Parent = Bar
 
-	UITextSizeConstraint_3.Parent = Indicator
-	UITextSizeConstraint_3.MaxTextSize = 29
-	
-	local Background = MainFrame
-	local bar = LoadingBar
-	local Filler = Bar
-	local Percentage = Percent
-	local Indicator = Indicator
+Percent.Name = "Percent"
+Percent.Parent = LoadingBar
+Percent.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Percent.BackgroundTransparency = 1.000
+Percent.Position = UDim2.new(0.0829875544, 0, 0, 0)
+Percent.Size = UDim2.new(0.829875529, 0, 1, 0)
+Percent.Font = Enum.Font.SourceSans
+Percent.Text = "0%"
+Percent.TextColor3 = Color3.fromRGB(255, 255, 255)
+Percent.TextScaled = true
+Percent.TextSize = 14.000
+Percent.TextStrokeColor3 = Color3.fromRGB(99, 99, 99)
+Percent.TextStrokeTransparency = 0.000
+Percent.TextTransparency = 0.460
+Percent.TextWrapped = true
+
+UITextSizeConstraint_2.Parent = Percent
+UITextSizeConstraint_2.MaxTextSize = 30
+
+Indicator.Name = "Indicator"
+Indicator.Parent = MainFrame
+Indicator.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Indicator.BackgroundTransparency = 1.000
+Indicator.Position = UDim2.new(0.153543308, 0, 0.425373137, 0)
+Indicator.Size = UDim2.new(0.688976407, 0, 0.216417909, 0)
+Indicator.Font = Enum.Font.SourceSans
+Indicator.Text = "Loading..."
+Indicator.TextColor3 = Color3.fromRGB(255, 255, 255)
+Indicator.TextScaled = true
+Indicator.TextSize = 14.000
+Indicator.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+Indicator.TextStrokeTransparency = 0.750
+Indicator.TextWrapped = true
+
+UITextSizeConstraint_3.Parent = Indicator
+UITextSizeConstraint_3.MaxTextSize = 29
+
+-- Scripts:
+
+local function RKOJTS_fake_script() -- MainFrame.LoadingBarScript 
+	local script = Instance.new('LocalScript', MainFrame)
+
+	local Background = script.Parent
+	local bar = Background.LoadingBar
+	local Filler = bar.Bar
+	local Percentage = bar.Percent
+	local Indicator = Background.Indicator
 	
 	spawn(function()
 		while true do
@@ -115,18 +122,21 @@ function Libary.CreateLoadingScreen(ParentGui ,Title, BGC)
 			wait(0.5)
 		end
 	end)
-
+	
 	for i = 0, 100 do
 		wait(0.1)
 		Percentage.Text = i.."%"
 		local formula = i/100
-
+		
 		Filler:TweenSize(UDim2.new(formula, 0, 1, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Linear, 0.1, true)
-
+		
 		if i == 48 or i == 89 then
 			wait(0.5)
 		end
 	end
+end
+coroutine.wrap(RKOJTS_fake_script)()	
+	
 end
 	
 return Libary
