@@ -132,7 +132,7 @@ function Libary:CreateLoadingScreen(title)
 		elseif i == 100 then
 			wait(0.5)
 			MainFrame:TweenSize(UDim2.new(0, 0, 0, 0), Enum.EasingDirection.InOut, Enum.EasingStyle.Linear, 1, false)
-			wait(10)
+			wait(2.5)
 			print("Loadingscreen Destoryed!")
 			wait(0.2)
 			LoadingScreen:Destroy()
