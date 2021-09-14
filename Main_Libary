@@ -1,6 +1,6 @@
 local Libary = {}
 
-function Libary:CreateLoadingScreen(title, BGC)
+function Libary:CreateLoadingScreen(title)
 	print(title)
 	print(BGC)
 	local LoadingScreen = Instance.new("ScreenGui")
