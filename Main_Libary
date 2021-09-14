@@ -136,6 +136,8 @@ function Libary:CreateLoadingScreen(title, MainGui, MainTweenSize)
 			wait(0.5)
 			MainFrame:TweenSize(UDim2.new(0, 0, 0, 0), Enum.EasingDirection.InOut, Enum.EasingStyle.Linear, 1, false)
 			wait(2.5)
+			MainGui.Visible = true
+			wait(0.1)
 			MainGui:TweenSize(MainTweenSize, Enum.EasingDirection.InOut, Enum.EasingStyle.Linear, 1, false)
 			wait(2.5)
 			LoadingScreen:Destroy()
