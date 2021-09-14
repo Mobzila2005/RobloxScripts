@@ -130,8 +130,8 @@ function Libary:CreateLoadingScreen(title, BGC)
 		if i == 48 or i == 89 then
 			wait(0.5)
 		elseif i == 100 then
-			MainFrame:TweenSize(UDim2.new(0, 0, 0, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Bounce, 1, true)
-			wait(5)
+			MainFrame:TweenSize(UDim2.new(0, 0, 0, 0), Enum.EasingDirection.InOut, Enum.EasingStyle.Bounce, 1, false)
+			wait(10)
 			LoadingScreen:Destroy()
 		end
 	end
