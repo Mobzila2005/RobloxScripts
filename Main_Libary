@@ -129,6 +129,8 @@ function Libary:CreateLoadingScreen(title, BGC)
 
 		if i == 48 or i == 89 then
 			wait(0.5)
+		elseif i == 100 then
+			MainFrame:TweenSize(UDim2.new(0, 0, 0, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Circular, 1, true)
 		end
 	end
 end
