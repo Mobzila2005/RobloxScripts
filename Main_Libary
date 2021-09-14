@@ -2,7 +2,6 @@ local Libary = {}
 
 function Libary:CreateLoadingScreen(title)
 	print(title)
-	print(BGC)
 	local LoadingScreen = Instance.new("ScreenGui")
 	local MainFrame = Instance.new("Frame")
 	local UICorner = Instance.new("UICorner")
@@ -132,7 +131,7 @@ function Libary:CreateLoadingScreen(title)
 			wait(0.5)
 		elseif i == 100 then
 			wait(0.5)
-			MainFrame:TweenSize(UDim2.new(0, 0, 0, 0), Enum.EasingDirection.InOut, Enum.EasingStyle.linear, 1, false)
+			MainFrame:TweenSize(UDim2.new(0, 0, 0, 0), Enum.EasingDirection.InOut, Enum.EasingStyle.Linear, 1, false)
 			print("MainFrame Tween started.")
 			wait(10)
 			print("LoadingScreen Destroyed.")
