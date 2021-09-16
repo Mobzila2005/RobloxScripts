@@ -135,17 +135,11 @@ function Libary:CreateLoadingScreen(title, MainGui, MainTweenSize)
 		elseif i == 100 then
 			wait(0.5)
 			MainFrame:TweenSize(UDim2.new(0, 0, 0, 0), Enum.EasingDirection.InOut, Enum.EasingStyle.Linear, 1, false)
-			wait(2.5)
+			wait(2)
 			MainGui.Visible = true
-			print("Main Gui is now Visible")
-			wait(0.5)
+			wait(0.1)
 			MainGui:TweenSize(MainTweenSize, Enum.EasingDirection.InOut, Enum.EasingStyle.Linear, 1, false)
-			print("Tween Started")
 			wait(2.5)
-			wait(10)
-			MainGui:Destory()
-			wait(0.5)
-			print("Loading gui destoryed.")
 			LoadingScreen:Destroy()
 		end
 	end
