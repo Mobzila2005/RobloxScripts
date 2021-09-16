@@ -138,7 +138,7 @@ function Libary:CreateLoadingScreen(title, MainGui, MainTweenSize)
 			wait(2.5)
 			MainGui.Visible = true
 			print("Main Gui is now Visible")
-			wait(0.1)
+			wait(0.5)
 			MainGui:TweenSize(MainTweenSize, Enum.EasingDirection.InOut, Enum.EasingStyle.Linear, 1, false)
 			print("Tween Started")
 			wait(2.5)
