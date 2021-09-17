@@ -31,6 +31,7 @@ function Libary:CreateLoadingScreen(title, MainGui, MainTweenSize)
 	MainFrame.Size = UDim2.new(0.200631917, 0, 0.215088278, 0)
 	MainFrame.AnchorPoint = Vector2.new(0.5, 0.5)
 	MainFrame.Draggable = true
+	MainFrame.Active = true
 
 	UICorner.Parent = MainFrame
 
