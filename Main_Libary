@@ -162,6 +162,7 @@ Tween4:Play()
 Tween4.Completed:wait()
 
 MainFrame.Visible = false
+MainGui.Visible = true
 MainGui:TweenSize(MainTweenSize, Enum.EasingDirection.InOut, Enum.EasingStyle.Linear, 1, false)
 wait(2.5)
 MainFrame:Destroy()
