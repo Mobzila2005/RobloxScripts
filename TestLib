@@ -1,1 +1,252 @@
+--Main Libary
+--Made by Mobzila2005#8380
+
+local Libary = {}
+
+function Libary:CreateLoadingScreen(title, MainGui, MainTweenSize)
+print(title)
+local LoadingScreen20 = Instance.new("ScreenGui")
+local BGGrew = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local BGBlack = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
+local Icon = Instance.new("ImageLabel")
+local Title = Instance.new("TextLabel")
+local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
+local LoadingBarBG = Instance.new("Frame")
+local LoadingBar = Instance.new("Frame")
+local Bar = Instance.new("Frame")
+local Percentage = Instance.new("TextLabel")
+local UITextSizeConstraint_2 = Instance.new("UITextSizeConstraint")
+
+--Properties:
+
+LoadingScreen20.Name = "LoadingScreen2.0"
+LoadingScreen20.Parent = game.CoreGui
+LoadingScreen20.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+BGGrew.Name = "BGGrew"
+BGGrew.Parent = LoadingScreen20
+BGGrew.AnchorPoint = Vector2.new(0.5, 1)
+BGGrew.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
+BGGrew.BackgroundTransparency = 0.100
+BGGrew.Position = UDim2.new(0.499789894, 0, 0.722311378, 0)
+BGGrew.Size = UDim2.new(0, 0, 0, 0)
+BGGrew.Visible = false
+
+UICorner.Parent = BGGrew
+
+BGBlack.Name = "BGBlack"
+BGBlack.Parent = BGGrew
+BGBlack.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+BGBlack.BackgroundTransparency = 0.100
+BGBlack.Position = UDim2.new(0.0270819217, 0, 0.0287272744, 0)
+BGBlack.Size = UDim2.new(0.944999993, 0, 0.944999933, 0)
+
+UICorner_2.Parent = BGBlack
+
+Icon.Name = "Icon"
+Icon.Parent = BGBlack
+Icon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Icon.BackgroundTransparency = 1.000
+Icon.Position = UDim2.new(0.184009135, 0, -0.00167196721, 0)
+Icon.Size = UDim2.new(0.630478621, 0, 0.490187645, 0)
+Icon.Image = "rbxassetid://7554570877"
+
+Title.Name = "Title"
+Title.Parent = BGBlack
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1.000
+Title.Position = UDim2.new(0.0238817669, 0, 0.512987077, 0)
+Title.Size = UDim2.new(0.955270648, 0, 0.189995214, 0)
+Title.Font = Enum.Font.Arial
+Title.Text = "RayS"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextScaled = true
+Title.TextSize = 14.000
+Title.TextStrokeColor3 = Color3.fromRGB(48, 64, 86)
+Title.TextStrokeTransparency = 0.000
+Title.TextWrapped = true
+
+UITextSizeConstraint.Parent = Title
+UITextSizeConstraint.MaxTextSize = 50
+
+LoadingBarBG.Name = "LoadingBarBG"
+LoadingBarBG.Parent = BGBlack
+LoadingBarBG.BackgroundColor3 = Color3.fromRGB(74, 74, 74)
+LoadingBarBG.Position = UDim2.new(0.0238817669, 0, 0.79038018, 0)
+LoadingBarBG.Size = UDim2.new(0.955270648, 0, 0.15199618, 0)
+
+LoadingBar.Name = "LoadingBar"
+LoadingBar.Parent = LoadingBarBG
+LoadingBar.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+LoadingBar.BackgroundTransparency = 0.200
+LoadingBar.Position = UDim2.new(0.025000006, 0, 0.0444443226, 0)
+LoadingBar.Size = UDim2.new(0.949999988, 0, 0.899999976, 0)
+
+Bar.Name = "Bar"
+Bar.Parent = LoadingBar
+Bar.BackgroundColor3 = Color3.fromRGB(130, 159, 255)
+Bar.BackgroundTransparency = 0.200
+Bar.Size = UDim2.new(0, 0, 1, 0)
+
+Percentage.Name = "Percentage"
+Percentage.Parent = LoadingBar
+Percentage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Percentage.BackgroundTransparency = 1.000
+Percentage.Size = UDim2.new(1, 0, 1, 0)
+Percentage.Font = Enum.Font.SourceSans
+Percentage.Text = "0%"
+Percentage.TextColor3 = Color3.fromRGB(255, 255, 255)
+Percentage.TextScaled = true
+Percentage.TextSize = 14.000
+Percentage.TextWrapped = true
+
+UITextSizeConstraint_2.Parent = Percentage
+UITextSizeConstraint_2.MaxTextSize = 36
+
+local MainFrame = BGGrew
+local bar = LoadingBar
+local filler = Bar
+local Percentage = Percentage
+
+local TweenService = game:GetService("TweenService")
+wait(2)
+MainFrame.Visible = true
+local Tween1 = TweenService:Create(
+	MainFrame, 
+	TweenInfo.new(2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), 
+	{Size = UDim2.new(0.175, 0, 0, 0)} 
+)
+Tween1:Play()
+Tween1.Completed:wait()
+local Tween2 = TweenService:Create(
+	MainFrame, 
+	TweenInfo.new(2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), 
+	{Size = UDim2.new(0.175, 0, 0.447, 0)} 
+)
+Tween2:Play()
+Tween2.Completed:wait()
+--MainPart
+
+wait(1)
+
+for i = 0, 100 do
+	wait(0.1)
+	Percentage.Text = i.."%"
+	local formula = i/100
+	filler:TweenSize(UDim2.new(formula, 0, 1, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Linear, 0.1, true)
+
+	if i == 48 or i == 89 then
+		wait(0.5)
+	elseif i == 100 then
+		Percentage.Text = "Finished!"
+	end
+end
+
+wait(1)
+
+local Tween3 = TweenService:Create(
+	MainFrame, 
+	TweenInfo.new(2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), 
+	{Size = UDim2.new(0.175, 0, 0, 0)} 
+)
+Tween3:Play()
+Tween3.Completed:wait()
+local Tween4 = TweenService:Create(
+	MainFrame, 
+	TweenInfo.new(2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), 
+	{Size = UDim2.new(0, 0, 0, 0)} 
+)
+Tween4:Play()
+Tween4.Completed:wait()
+
+MainFrame.Visible = false
+MainGui.Visible = true
+MainGui:TweenSize(MainTweenSize, Enum.EasingDirection.InOut, Enum.EasingStyle.Linear, 1, false)
+wait(2.5)
+MainFrame:Destroy()
+end
+
+function Libary:CreateWindow(title)
+	local LibUIMS = Instance.new("ScreenGui")
+	local BG1 = Instance.new("Frame")
+	local UICorner = Instance.new("UICorner")
+	local BGR = Instance.new("Frame")
+	local UICorner_2 = Instance.new("UICorner")
+	local BGL = Instance.new("Frame")
+	local UICorner_3 = Instance.new("UICorner")
+	local Title = Instance.new("TextLabel")
+	local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
+	local UITitle = Instance.new("TextLabel")
+	local UITextSizeConstraint_2 = Instance.new("UITextSizeConstraint")
+	
+	LibUIMS.Name = "LibUIMS"
+	LibUIMS.Parent = game.CoreGui
+	LibUIMS.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+	BG1.Name = "BG1"
+	BG1.Parent = LibUIMS
+	BG1.AnchorPoint = Vector2.new(0.5, 0.5)
+	BG1.BackgroundColor3 = Color3.fromRGB(57, 57, 57)
+	BG1.Position = UDim2.new(0.49999997, 0, 0.499197423, 0)
+	BG1.Size = UDim2.new(0, 0, 0, 0)
+	BG1.Active = true
+	BG1.Visible = false
+
+	UICorner.CornerRadius = UDim.new(0, 6)
+	UICorner.Parent = BG1
+
+	BGR.Name = "BGR"
+	BGR.Parent = BG1
+	BGR.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+	BGR.Position = UDim2.new(0.301994294, 0, 0.0160000008, 0)
+	BGR.Size = UDim2.new(0.675999999, 0, 0.964999974, 0)
+
+	UICorner_2.CornerRadius = UDim.new(0, 6)
+	UICorner_2.Parent = BGR
+
+	BGL.Name = "BGL"
+	BGL.Parent = BG1
+	BGL.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+	BGL.Size = UDim2.new(0.278390259, 0, 1, 0)
+
+	UICorner_3.CornerRadius = UDim.new(0, 6)
+	UICorner_3.Parent = BGL
+
+	Title.Name = "Title"
+	Title.Parent = BGL
+	Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Title.BackgroundTransparency = 1.000
+	Title.Position = UDim2.new(0.0614030734, 0, 0.0160000008, 0)
+	Title.Size = UDim2.new(0.869876862, 0, 0.115999997, 0)
+	Title.Font = Enum.Font.SourceSans
+	Title.Text = "RayS"
+	Title.TextColor3 = Color3.fromRGB(0, 170, 255)
+	Title.TextScaled = true
+	Title.TextSize = 14.000
+	Title.TextWrapped = true
+
+	UITextSizeConstraint.Parent = Title
+	UITextSizeConstraint.MaxTextSize = 29
+
+	UITitle.Name = "UITitle"
+	UITitle.Parent = BGL
+	UITitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	UITitle.BackgroundTransparency = 1.000
+	UITitle.Position = UDim2.new(0.0614030734, 0, 0.131999999, 0)
+	UITitle.Size = UDim2.new(0.869876862, 0, 0.0879999995, 0)
+	UITitle.Font = Enum.Font.SourceSans
+	UITitle.Text = title
+	UITitle.TextColor3 = Color3.fromRGB(0, 170, 255)
+	UITitle.TextScaled = true
+	UITitle.TextSize = 14.000
+	UITitle.TextWrapped = true
+
+	UITextSizeConstraint_2.Parent = UITitle
+	UITextSizeConstraint_2.MaxTextSize = 13
+	
+end
+
+return Libary
 
