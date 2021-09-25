@@ -248,8 +248,8 @@ function Libary:CreateWindow(title)
 
 	UITextSizeConstraint_2.Parent = UITitle
 	UITextSizeConstraint_2.MaxTextSize = 13
-	print(BG1.Visible)
+	
+	local FunctionsLib = {}
+		
+	return FunctionsLib
 end
-
-return Libary
-
