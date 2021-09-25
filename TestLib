@@ -3,20 +3,6 @@
 
 local Libary = {}
 
-local LoadingScreen20 = Instance.new("ScreenGui")
-local BGGrew = Instance.new("Frame")
-local UICorner = Instance.new("UICorner")
-local BGBlack = Instance.new("Frame")
-local UICorner_2 = Instance.new("UICorner")
-local Icon = Instance.new("ImageLabel")
-local Title = Instance.new("TextLabel")
-local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
-local LoadingBarBG = Instance.new("Frame")
-local LoadingBar = Instance.new("Frame")
-local Bar = Instance.new("Frame")
-local Percentage = Instance.new("TextLabel")
-local UITextSizeConstraint_2 = Instance.new("UITextSizeConstraint")
-
 local LibUIMS = Instance.new("ScreenGui")
 local BG1 = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
@@ -32,7 +18,19 @@ local UITextSizeConstraint_2 = Instance.new("UITextSizeConstraint")
 
 function Libary:CreateLoadingScreen(title, MainGui, MainTweenSize)
 print(title)
-
+local LoadingScreen20 = Instance.new("ScreenGui")
+local BGGrew = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local BGBlack = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
+local Icon = Instance.new("ImageLabel")
+local Title = Instance.new("TextLabel")
+local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
+local LoadingBarBG = Instance.new("Frame")
+local LoadingBar = Instance.new("Frame")
+local Bar = Instance.new("Frame")
+local Percentage = Instance.new("TextLabel")
+local UITextSizeConstraint_2 = Instance.new("UITextSizeConstraint")
 --Properties:
 
 LoadingScreen20.Name = "LoadingScreen2.0"
