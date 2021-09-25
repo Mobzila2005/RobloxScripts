@@ -4,8 +4,6 @@
 local Libary = {}
 
 function Libary:CreateLoadingScreen(title, MainGui, MainTweenSize)
-print(MainGui)
-print(MainTweenSize)
 print(title)
 local LoadingScreen20 = Instance.new("ScreenGui")
 local BGGrew = Instance.new("Frame")
