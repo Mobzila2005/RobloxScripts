@@ -263,7 +263,6 @@ function Libary:CreateWindow(title)
 		ListFrame.Parent = BGL
 		ListFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 		ListFrame.BackgroundTransparency = 1.000
-		ListFrame.Position = UDim2.new(0, 0, 0.272000015, 0)
 		ListFrame.Size = UDim2.new(0.992682993, 0, 0.727999985, 0)
 
 		UICorner_4.CornerRadius = UDim.new(0, 6)
