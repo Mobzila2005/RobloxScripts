@@ -169,6 +169,7 @@ MainFrame:Destroy()
 end
 
 function Libary:CreateWindow(title)
+	print(title)
 	local LibUIMS = Instance.new("ScreenGui")
 	local BG1 = Instance.new("Frame")
 	local UICorner = Instance.new("UICorner")
@@ -245,6 +246,7 @@ function Libary:CreateWindow(title)
 
 	UITextSizeConstraint_2.Parent = UITitle
 	UITextSizeConstraint_2.MaxTextSize = 13
+	print(BG1.Visible)
 	return BG1
 end
 
