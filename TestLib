@@ -263,6 +263,7 @@ function Libary:CreateWindow(title)
 		ListFrame.Parent = BGL
 		ListFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 		ListFrame.BackgroundTransparency = 1.000
+		ListFrame.Position = UDim2.new(0, 0, 0.272000015, 0)
 		ListFrame.Size = UDim2.new(0.992682993, 0, 0.727999985, 0)
 
 		UICorner_4.CornerRadius = UDim.new(0, 6)
@@ -276,7 +277,6 @@ function Libary:CreateWindow(title)
 		Tab1.Name = "Tab1"
 		Tab1.Parent = ListFrame
 		Tab1.BackgroundColor3 = Color3.fromRGB(0, 170, 255)
-		Tab1.Position = UDim2.new(-0.530927837, 0, 0.0564102568, 0)
 		Tab1.Size = UDim2.new(0.845, 0, 0.11, 0)
 		Tab1.Font = Enum.Font.SourceSans
 		Tab1.Text = Description
