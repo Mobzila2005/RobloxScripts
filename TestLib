@@ -14,6 +14,9 @@ local Title = Instance.new("TextLabel")
 local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
 local UITitle = Instance.new("TextLabel")
 local UITextSizeConstraint_2 = Instance.new("UITextSizeConstraint")
+local ListFrame = Instance.new("Frame")
+local UICorner_4 = Instance.new("UICorner")
+local UIListLayout_2 = Instance.new("UIListLayout")
 
 
 function Libary:CreateLoadingScreen(title, MainGui, MainTweenSize)
@@ -182,7 +185,7 @@ end
 
 function Libary:CreateWindow(title)
 	print(title)
-
+	
 	LibUIMS.Name = "LibUIMS"
 	LibUIMS.Parent = game.CoreGui
 	LibUIMS.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
@@ -248,31 +251,27 @@ function Libary:CreateWindow(title)
 
 	UITextSizeConstraint_2.Parent = UITitle
 	UITextSizeConstraint_2.MaxTextSize = 13
+	
+	ListFrame.Name = "ListFrame"
+	ListFrame.Parent = BGL
+	ListFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	ListFrame.BackgroundTransparency = 1.000
+	ListFrame.Position = UDim2.new(0, 0, 0.272000015, 0)
+	ListFrame.Size = UDim2.new(0.992682993, 0, 0.727999985, 0)
 
+	UICorner_4.CornerRadius = UDim.new(0, 6)
+	UICorner_4.Parent = ListFrame
+
+	UIListLayout_2.Parent = ListFrame
+	UIListLayout_2.HorizontalAlignment = Enum.HorizontalAlignment.Center
+	UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
+	UIListLayout_2.Padding = UDim.new(0.0399999991, 0)
 	
 	local FunctionsLib = {}
 	
 	function FunctionsLib:CreateTab(Description)
-		local ListFrame = Instance.new("Frame")
-		local UICorner_4 = Instance.new("UICorner")
-		local UIListLayout_2 = Instance.new("UIListLayout")
 		local Tab1 = Instance.new("TextButton")
 		local UICorner_5 = Instance.new("UICorner")
-		
-		ListFrame.Name = "ListFrame"
-		ListFrame.Parent = BGL
-		ListFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-		ListFrame.BackgroundTransparency = 1.000
-		ListFrame.Position = UDim2.new(0, 0, 0.272000015, 0)
-		ListFrame.Size = UDim2.new(0.992682993, 0, 0.727999985, 0)
-
-		UICorner_4.CornerRadius = UDim.new(0, 6)
-		UICorner_4.Parent = ListFrame
-
-		UIListLayout_2.Parent = ListFrame
-		UIListLayout_2.HorizontalAlignment = Enum.HorizontalAlignment.Center
-		UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
-		UIListLayout_2.Padding = UDim.new(0.0399999991, 0)
 
 		Tab1.Name = "Tab1"
 		Tab1.Parent = ListFrame
