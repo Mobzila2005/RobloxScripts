@@ -17,172 +17,172 @@ local UITextSizeConstraint_2 = Instance.new("UITextSizeConstraint")
 
 
 function Libary:CreateLoadingScreen(title, MainGui, MainTweenSize)
-print(title)
-local LoadingScreen20 = Instance.new("ScreenGui")
-local BGGrew = Instance.new("Frame")
-local UICorner = Instance.new("UICorner")
-local BGBlack = Instance.new("Frame")
-local UICorner_2 = Instance.new("UICorner")
-local Icon = Instance.new("ImageLabel")
-local Title = Instance.new("TextLabel")
-local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
-local LoadingBarBG = Instance.new("Frame")
-local LoadingBar = Instance.new("Frame")
-local Bar = Instance.new("Frame")
-local Percentage = Instance.new("TextLabel")
-local UITextSizeConstraint_2 = Instance.new("UITextSizeConstraint")
---Properties:
+	print(title)
+	local LoadingScreen20 = Instance.new("ScreenGui")
+	local BGGrew = Instance.new("Frame")
+	local UICorner = Instance.new("UICorner")
+	local BGBlack = Instance.new("Frame")
+	local UICorner_2 = Instance.new("UICorner")
+	local Icon = Instance.new("ImageLabel")
+	local Title = Instance.new("TextLabel")
+	local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
+	local LoadingBarBG = Instance.new("Frame")
+	local LoadingBar = Instance.new("Frame")
+	local Bar = Instance.new("Frame")
+	local Percentage = Instance.new("TextLabel")
+	local UITextSizeConstraint_2 = Instance.new("UITextSizeConstraint")
+	--Properties:
 
-LoadingScreen20.Name = "LoadingScreen2.0"
-LoadingScreen20.Parent = game.CoreGui
-LoadingScreen20.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+	LoadingScreen20.Name = "LoadingScreen2.0"
+	LoadingScreen20.Parent = game.CoreGui
+	LoadingScreen20.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-BGGrew.Name = "BGGrew"
-BGGrew.Parent = LoadingScreen20
-BGGrew.AnchorPoint = Vector2.new(0.5, 1)
-BGGrew.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
-BGGrew.BackgroundTransparency = 0.100
-BGGrew.Position = UDim2.new(0.499789894, 0, 0.722311378, 0)
-BGGrew.Size = UDim2.new(0, 0, 0, 0)
-BGGrew.Visible = false
+	BGGrew.Name = "BGGrew"
+	BGGrew.Parent = LoadingScreen20
+	BGGrew.AnchorPoint = Vector2.new(0.5, 1)
+	BGGrew.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
+	BGGrew.BackgroundTransparency = 0.100
+	BGGrew.Position = UDim2.new(0.499789894, 0, 0.722311378, 0)
+	BGGrew.Size = UDim2.new(0, 0, 0, 0)
+	BGGrew.Visible = false
 
-UICorner.Parent = BGGrew
+	UICorner.Parent = BGGrew
 
-BGBlack.Name = "BGBlack"
-BGBlack.Parent = BGGrew
-BGBlack.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
-BGBlack.BackgroundTransparency = 0.100
-BGBlack.Position = UDim2.new(0.0270819217, 0, 0.0287272744, 0)
-BGBlack.Size = UDim2.new(0.944999993, 0, 0.944999933, 0)
+	BGBlack.Name = "BGBlack"
+	BGBlack.Parent = BGGrew
+	BGBlack.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+	BGBlack.BackgroundTransparency = 0.100
+	BGBlack.Position = UDim2.new(0.0270819217, 0, 0.0287272744, 0)
+	BGBlack.Size = UDim2.new(0.944999993, 0, 0.944999933, 0)
 
-UICorner_2.Parent = BGBlack
+	UICorner_2.Parent = BGBlack
 
-Icon.Name = "Icon"
-Icon.Parent = BGBlack
-Icon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Icon.BackgroundTransparency = 1.000
-Icon.Position = UDim2.new(0.184009135, 0, -0.00167196721, 0)
-Icon.Size = UDim2.new(0.630478621, 0, 0.490187645, 0)
-Icon.Image = "rbxassetid://7554570877"
+	Icon.Name = "Icon"
+	Icon.Parent = BGBlack
+	Icon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Icon.BackgroundTransparency = 1.000
+	Icon.Position = UDim2.new(0.184009135, 0, -0.00167196721, 0)
+	Icon.Size = UDim2.new(0.630478621, 0, 0.490187645, 0)
+	Icon.Image = "rbxassetid://7554570877"
 
-Title.Name = "Title"
-Title.Parent = BGBlack
-Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Title.BackgroundTransparency = 1.000
-Title.Position = UDim2.new(0.0238817669, 0, 0.512987077, 0)
-Title.Size = UDim2.new(0.955270648, 0, 0.189995214, 0)
-Title.Font = Enum.Font.Arial
-Title.Text = "RayS"
-Title.TextColor3 = Color3.fromRGB(255, 255, 255)
-Title.TextScaled = true
-Title.TextSize = 14.000
-Title.TextStrokeColor3 = Color3.fromRGB(48, 64, 86)
-Title.TextStrokeTransparency = 0.000
-Title.TextWrapped = true
+	Title.Name = "Title"
+	Title.Parent = BGBlack
+	Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Title.BackgroundTransparency = 1.000
+	Title.Position = UDim2.new(0.0238817669, 0, 0.512987077, 0)
+	Title.Size = UDim2.new(0.955270648, 0, 0.189995214, 0)
+	Title.Font = Enum.Font.Arial
+	Title.Text = "RayS"
+	Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+	Title.TextScaled = true
+	Title.TextSize = 14.000
+	Title.TextStrokeColor3 = Color3.fromRGB(48, 64, 86)
+	Title.TextStrokeTransparency = 0.000
+	Title.TextWrapped = true
 
-UITextSizeConstraint.Parent = Title
-UITextSizeConstraint.MaxTextSize = 50
+	UITextSizeConstraint.Parent = Title
+	UITextSizeConstraint.MaxTextSize = 50
 
-LoadingBarBG.Name = "LoadingBarBG"
-LoadingBarBG.Parent = BGBlack
-LoadingBarBG.BackgroundColor3 = Color3.fromRGB(74, 74, 74)
-LoadingBarBG.Position = UDim2.new(0.0238817669, 0, 0.79038018, 0)
-LoadingBarBG.Size = UDim2.new(0.955270648, 0, 0.15199618, 0)
+	LoadingBarBG.Name = "LoadingBarBG"
+	LoadingBarBG.Parent = BGBlack
+	LoadingBarBG.BackgroundColor3 = Color3.fromRGB(74, 74, 74)
+	LoadingBarBG.Position = UDim2.new(0.0238817669, 0, 0.79038018, 0)
+	LoadingBarBG.Size = UDim2.new(0.955270648, 0, 0.15199618, 0)
 
-LoadingBar.Name = "LoadingBar"
-LoadingBar.Parent = LoadingBarBG
-LoadingBar.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
-LoadingBar.BackgroundTransparency = 0.200
-LoadingBar.Position = UDim2.new(0.025000006, 0, 0.0444443226, 0)
-LoadingBar.Size = UDim2.new(0.949999988, 0, 0.899999976, 0)
+	LoadingBar.Name = "LoadingBar"
+	LoadingBar.Parent = LoadingBarBG
+	LoadingBar.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+	LoadingBar.BackgroundTransparency = 0.200
+	LoadingBar.Position = UDim2.new(0.025000006, 0, 0.0444443226, 0)
+	LoadingBar.Size = UDim2.new(0.949999988, 0, 0.899999976, 0)
 
-Bar.Name = "Bar"
-Bar.Parent = LoadingBar
-Bar.BackgroundColor3 = Color3.fromRGB(130, 159, 255)
-Bar.BackgroundTransparency = 0.200
-Bar.Size = UDim2.new(0, 0, 1, 0)
+	Bar.Name = "Bar"
+	Bar.Parent = LoadingBar
+	Bar.BackgroundColor3 = Color3.fromRGB(130, 159, 255)
+	Bar.BackgroundTransparency = 0.200
+	Bar.Size = UDim2.new(0, 0, 1, 0)
 
-Percentage.Name = "Percentage"
-Percentage.Parent = LoadingBar
-Percentage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Percentage.BackgroundTransparency = 1.000
-Percentage.Size = UDim2.new(1, 0, 1, 0)
-Percentage.Font = Enum.Font.SourceSans
-Percentage.Text = "0%"
-Percentage.TextColor3 = Color3.fromRGB(255, 255, 255)
-Percentage.TextScaled = true
-Percentage.TextSize = 14.000
-Percentage.TextWrapped = true
+	Percentage.Name = "Percentage"
+	Percentage.Parent = LoadingBar
+	Percentage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Percentage.BackgroundTransparency = 1.000
+	Percentage.Size = UDim2.new(1, 0, 1, 0)
+	Percentage.Font = Enum.Font.SourceSans
+	Percentage.Text = "0%"
+	Percentage.TextColor3 = Color3.fromRGB(255, 255, 255)
+	Percentage.TextScaled = true
+	Percentage.TextSize = 14.000
+	Percentage.TextWrapped = true
 
-UITextSizeConstraint_2.Parent = Percentage
-UITextSizeConstraint_2.MaxTextSize = 36
+	UITextSizeConstraint_2.Parent = Percentage
+	UITextSizeConstraint_2.MaxTextSize = 36
 
-local MainFrame = BGGrew
-local bar = LoadingBar
-local filler = Bar
-local Percentage = Percentage
+	local MainFrame = BGGrew
+	local bar = LoadingBar
+	local filler = Bar
+	local Percentage = Percentage
 
-local TweenService = game:GetService("TweenService")
-wait(2)
-MainFrame.Visible = true
-local Tween1 = TweenService:Create(
-	MainFrame, 
-	TweenInfo.new(2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), 
-	{Size = UDim2.new(0.175, 0, 0, 0)} 
-)
-Tween1:Play()
-Tween1.Completed:wait()
-local Tween2 = TweenService:Create(
-	MainFrame, 
-	TweenInfo.new(2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), 
-	{Size = UDim2.new(0.175, 0, 0.447, 0)} 
-)
-Tween2:Play()
-Tween2.Completed:wait()
---MainPart
+	local TweenService = game:GetService("TweenService")
+	wait(2)
+	MainFrame.Visible = true
+	local Tween1 = TweenService:Create(
+		MainFrame, 
+		TweenInfo.new(2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), 
+		{Size = UDim2.new(0.175, 0, 0, 0)} 
+	)
+	Tween1:Play()
+	Tween1.Completed:wait()
+	local Tween2 = TweenService:Create(
+		MainFrame, 
+		TweenInfo.new(2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), 
+		{Size = UDim2.new(0.175, 0, 0.447, 0)} 
+	)
+	Tween2:Play()
+	Tween2.Completed:wait()
+	--MainPart
 
-wait(1)
+	wait(1)
 
-for i = 0, 100 do
-	wait(0.1)
-	Percentage.Text = i.."%"
-	local formula = i/100
-	filler:TweenSize(UDim2.new(formula, 0, 1, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Linear, 0.1, true)
+	for i = 0, 100 do
+		wait(0.1)
+		Percentage.Text = i.."%"
+		local formula = i/100
+		filler:TweenSize(UDim2.new(formula, 0, 1, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Linear, 0.1, true)
 
-	if i == 48 or i == 89 then
-		wait(0.5)
-	elseif i == 100 then
-		Percentage.Text = "Finished!"
+		if i == 48 or i == 89 then
+			wait(0.5)
+		elseif i == 100 then
+			Percentage.Text = "Finished!"
+		end
 	end
-end
 
-wait(1)
+	wait(1)
 
-local Tween3 = TweenService:Create(
-	MainFrame, 
-	TweenInfo.new(2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), 
-	{Size = UDim2.new(0.175, 0, 0, 0)} 
-)
-Tween3:Play()
-Tween3.Completed:wait()
-local Tween4 = TweenService:Create(
-	MainFrame, 
-	TweenInfo.new(2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), 
-	{Size = UDim2.new(0, 0, 0, 0)} 
-)
-Tween4:Play()
-Tween4.Completed:wait()
+	local Tween3 = TweenService:Create(
+		MainFrame, 
+		TweenInfo.new(2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), 
+		{Size = UDim2.new(0.175, 0, 0, 0)} 
+	)
+	Tween3:Play()
+	Tween3.Completed:wait()
+	local Tween4 = TweenService:Create(
+		MainFrame, 
+		TweenInfo.new(2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), 
+		{Size = UDim2.new(0, 0, 0, 0)} 
+	)
+	Tween4:Play()
+	Tween4.Completed:wait()
 
-MainFrame.Visible = false
-BG1.Visible = true
-BG1:TweenSize(MainTweenSize, Enum.EasingDirection.InOut, Enum.EasingStyle.Linear, 1, false)
-wait(2.5)
-MainFrame:Destroy()
+	MainFrame.Visible = false
+	BG1.Visible = true
+	BG1:TweenSize(MainTweenSize, Enum.EasingDirection.InOut, Enum.EasingStyle.Linear, 1, false)
+	wait(2.5)
+	MainFrame:Destroy()
 end
 
 function Libary:CreateWindow(title)
 	print(title)
-	
+
 	LibUIMS.Name = "LibUIMS"
 	LibUIMS.Parent = game.CoreGui
 	LibUIMS.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
@@ -248,9 +248,47 @@ function Libary:CreateWindow(title)
 
 	UITextSizeConstraint_2.Parent = UITitle
 	UITextSizeConstraint_2.MaxTextSize = 13
+
 	
 	local FunctionsLib = {}
+	
+	function FunctionsLib:CreateTab(Description)
+		local ListFrame = Instance.new("Frame")
+		local UICorner_4 = Instance.new("UICorner")
+		local UIListLayout_2 = Instance.new("UIListLayout")
+		local Tab1 = Instance.new("TextButton")
+		local UICorner_5 = Instance.new("UICorner")
 		
+		ListFrame.Name = "ListFrame"
+		ListFrame.Parent = BGL
+		ListFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		ListFrame.BackgroundTransparency = 1.000
+		ListFrame.Position = UDim2.new(0, 0, 0.272000015, 0)
+		ListFrame.Size = UDim2.new(0.992682993, 0, 0.727999985, 0)
+
+		UICorner_4.CornerRadius = UDim.new(0, 6)
+		UICorner_4.Parent = ListFrame
+
+		UIListLayout_2.Parent = ListFrame
+		UIListLayout_2.HorizontalAlignment = Enum.HorizontalAlignment.Center
+		UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
+		UIListLayout_2.Padding = UDim.new(0.0399999991, 0)
+
+		Tab1.Name = "Tab1"
+		Tab1.Parent = ListFrame
+		Tab1.BackgroundColor3 = Color3.fromRGB(0, 170, 255)
+		Tab1.Position = UDim2.new(-0.530927837, 0, 0.0564102568, 0)
+		Tab1.Size = UDim2.new(0, 82, 0, 20)
+		Tab1.Font = Enum.Font.SourceSans
+		Tab1.Text = Description
+		Tab1.TextColor3 = Color3.fromRGB(255, 255, 255)
+		Tab1.TextScaled = true
+		Tab1.TextSize = 14.000
+		Tab1.TextWrapped = true
+
+		UICorner_5.Parent = Tab1
+	end
+	
 	return FunctionsLib
 end
 
