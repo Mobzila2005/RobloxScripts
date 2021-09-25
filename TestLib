@@ -3,8 +3,6 @@
 
 local Libary = {}
 
-function Libary:CreateLoadingScreen(title, MainGui, MainTweenSize)
-print(title)
 local LoadingScreen20 = Instance.new("ScreenGui")
 local BGGrew = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
@@ -18,6 +16,22 @@ local LoadingBar = Instance.new("Frame")
 local Bar = Instance.new("Frame")
 local Percentage = Instance.new("TextLabel")
 local UITextSizeConstraint_2 = Instance.new("UITextSizeConstraint")
+
+local LibUIMS = Instance.new("ScreenGui")
+local BG1 = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local BGR = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
+local BGL = Instance.new("Frame")
+local UICorner_3 = Instance.new("UICorner")
+local Title = Instance.new("TextLabel")
+local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
+local UITitle = Instance.new("TextLabel")
+local UITextSizeConstraint_2 = Instance.new("UITextSizeConstraint")
+
+
+function Libary:CreateLoadingScreen(title, MainGui, MainTweenSize)
+print(title)
 
 --Properties:
 
@@ -162,25 +176,14 @@ Tween4:Play()
 Tween4.Completed:wait()
 
 MainFrame.Visible = false
-MainGui.Visible = true
-MainGui:TweenSize(MainTweenSize, Enum.EasingDirection.InOut, Enum.EasingStyle.Linear, 1, false)
+BG1.Visible = true
+BG1:TweenSize(MainTweenSize, Enum.EasingDirection.InOut, Enum.EasingStyle.Linear, 1, false)
 wait(2.5)
 MainFrame:Destroy()
 end
 
 function Libary:CreateWindow(title)
 	print(title)
-	local LibUIMS = Instance.new("ScreenGui")
-	local BG1 = Instance.new("Frame")
-	local UICorner = Instance.new("UICorner")
-	local BGR = Instance.new("Frame")
-	local UICorner_2 = Instance.new("UICorner")
-	local BGL = Instance.new("Frame")
-	local UICorner_3 = Instance.new("UICorner")
-	local Title = Instance.new("TextLabel")
-	local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
-	local UITitle = Instance.new("TextLabel")
-	local UITextSizeConstraint_2 = Instance.new("UITextSizeConstraint")
 	
 	LibUIMS.Name = "LibUIMS"
 	LibUIMS.Parent = game.CoreGui
@@ -248,7 +251,6 @@ function Libary:CreateWindow(title)
 	UITextSizeConstraint_2.Parent = UITitle
 	UITextSizeConstraint_2.MaxTextSize = 13
 	print(BG1.Visible)
-	--return BG1
 end
 
 return Libary
