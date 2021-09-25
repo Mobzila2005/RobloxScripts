@@ -253,3 +253,5 @@ function Libary:CreateWindow(title)
 		
 	return FunctionsLib
 end
+
+return Libary
