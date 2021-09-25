@@ -194,6 +194,7 @@ function Libary:CreateWindow(title)
 	BG1.Size = UDim2.new(0, 0, 0, 0)
 	BG1.Active = true
 	BG1.Visible = false
+	BG1.Draggable = true
 
 	UICorner.CornerRadius = UDim.new(0, 6)
 	UICorner.Parent = BG1
