@@ -185,6 +185,7 @@ function Libary:CreateLoadingScreen(title, MainGui, MainTweenSize)
 end
 
 function Libary:CreateWindow(title)
+	local Window = {}
 	print(title)
 
 	LibUIMS.Name = "LibUIMS"
@@ -214,7 +215,6 @@ function Libary:CreateWindow(title)
 	UICorner_2.Parent = BGR
 	
 	Frames.Parent = BGR
-	Frames.Name = "Frames"
 
 	BGL.Name = "BGL"
 	BGL.Parent = BG1
@@ -271,9 +271,10 @@ function Libary:CreateWindow(title)
 	UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
 	UIListLayout_2.Padding = UDim.new(0.0399999991, 0)
 
-	local FunctionsLib = {}
+	
 
-	function FunctionsLib:CreateTab(Description, test)
+	function Window:CreateTab(Description)
+		
 		local Tab1 = Instance.new("TextButton")
 		local UICorner_5 = Instance.new("UICorner")
 		local MainBtnFrame = Instance.new("ScrollingFrame")
@@ -291,22 +292,24 @@ function Libary:CreateWindow(title)
 		Tab1.TextScaled = true
 		Tab1.TextSize = 14.000
 		Tab1.TextWrapped = true
-		Tab1.MouseButton1Click:Connect(function()
+		Tab1.MouseButton1Down:Connect(function()
 			for i, v in pairs(Frames) do
-				v.Visible = false
+				if v.Visible == true then
+					v.Visible = false
+				end
 			end
-			wait(0.1)
 			MainBtnFrame.Visible = true
 		end)
 
 		UICorner_5.Parent = Tab1
 		
+		MainBtnFrame.Name = "MainBtnFrame"
 		MainBtnFrame.Parent = Frames
+		MainBtnFrame.Active = true
 		MainBtnFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 		MainBtnFrame.BackgroundTransparency = 1.000
 		MainBtnFrame.Size = UDim2.new(1, 0, 1, 0)
 		MainBtnFrame.ScrollBarThickness = 0
-		MainBtnFrame.Visible = false
 
 		UIListLayout.Parent = MainBtnFrame
 		UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
@@ -317,7 +320,7 @@ function Libary:CreateWindow(title)
 		TestFrameBtn.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 		TestFrameBtn.Size = UDim2.new(1, 0, 0.0870466307, 0)
 		TestFrameBtn.Font = Enum.Font.SourceSans
-		TestFrameBtn.Text = test
+		TestFrameBtn.Text = "Test"
 		TestFrameBtn.TextColor3 = Color3.fromRGB(0, 0, 0)
 		TestFrameBtn.TextSize = 14.000
 
@@ -326,7 +329,7 @@ function Libary:CreateWindow(title)
 		
 	end
 
-	return FunctionsLib
+	return Window
 end
 
 return Libary
