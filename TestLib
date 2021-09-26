@@ -301,12 +301,12 @@ function Libary:CreateWindow(title)
 					v.Visible = false
 				end
 			end
-			MainBtnFrame.Visible = true
+			Frames:FindFirstChild(Description).Visible = true
 		end)
 
 		UICorner_5.Parent = Tab1
 
-		MainBtnFrame.Name = "MainBtnFrame"
+		MainBtnFrame.Name = Description
 		MainBtnFrame.Parent = Frames
 		MainBtnFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 		MainBtnFrame.BackgroundTransparency = 1.000
