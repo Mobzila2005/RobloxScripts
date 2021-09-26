@@ -295,15 +295,8 @@ function Libary:CreateWindow(title)
 		Tab1.TextScaled = true
 		Tab1.TextSize = 14.000
 		Tab1.TextWrapped = true
-		Tab1.MouseButton1Down:Connect(function()
-			for i, v in pairs(Frames) do
-				if v.Visible == true then
-					v.Visible = false
-					print(v)
-				end
-			end
-			Frames:WaitForChild(Description).Visible = true
-			print(Frames:WaitForChild(Description).Visible)
+		Tab1.MouseButton1Click:Connect(function()
+			MainBtnFrame.Visible = true
 		end)
 
 		UICorner_5.Parent = Tab1
