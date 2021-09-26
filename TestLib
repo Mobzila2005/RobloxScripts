@@ -345,6 +345,32 @@ function Libary:CreateWindow(title)
 			UITextSizeConstraint.MaxTextSize = 70
 		end
 		
+		function Tab:CreateButton(text, callback)
+			local callback = callback or function() end
+			
+			local NormalButton = Instance.new("TextButton")
+			local UICorner = Instance.new("UICorner")
+			
+			NormalButton.Name = "NormalButton"
+			NormalButton.Parent = MainBtnFrame
+			NormalButton.Active = false
+			NormalButton.BackgroundColor3 = Color3.fromRGB(65, 65, 65)
+			NormalButton.Size = UDim2.new(0.930999994, 0, 0.0710000023, 0)
+			NormalButton.Font = Enum.Font.SourceSans
+			NormalButton.Text = text
+			NormalButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+			NormalButton.TextScaled = true
+			NormalButton.TextSize = 14.000
+			NormalButton.TextStrokeTransparency = 0.500
+			NormalButton.TextWrapped = true
+			NormalButton.MouseButton1Click:Connect(function()
+				pcall(callback)
+			end)
+
+			UICorner.CornerRadius = UDim.new(0, 6)
+			UICorner.Parent = NormalButton
+		end
+		
 		return Tab
 	end
 
