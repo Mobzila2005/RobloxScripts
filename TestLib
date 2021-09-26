@@ -272,7 +272,7 @@ function Libary:CreateWindow(title)
 
 	local FunctionsLib = {}
 
-	function FunctionsLib:CreateTab(Description)
+	function FunctionsLib:CreateTab(Description, test)
 		local Tab1 = Instance.new("TextButton")
 		local UICorner_5 = Instance.new("UICorner")
 		local MainBtnFrame = Instance.new("ScrollingFrame")
@@ -306,6 +306,7 @@ function Libary:CreateWindow(title)
 		MainBtnFrame.BackgroundTransparency = 1.000
 		MainBtnFrame.Size = UDim2.new(1, 0, 1, 0)
 		MainBtnFrame.ScrollBarThickness = 0
+		MainBtnFrame.Visible = false
 
 		UIListLayout.Parent = MainBtnFrame
 		UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
@@ -316,7 +317,7 @@ function Libary:CreateWindow(title)
 		TestFrameBtn.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 		TestFrameBtn.Size = UDim2.new(1, 0, 0.0870466307, 0)
 		TestFrameBtn.Font = Enum.Font.SourceSans
-		TestFrameBtn.Text = "Test"
+		TestFrameBtn.Text = test
 		TestFrameBtn.TextColor3 = Color3.fromRGB(0, 0, 0)
 		TestFrameBtn.TextSize = 14.000
 
