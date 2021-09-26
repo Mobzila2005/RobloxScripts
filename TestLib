@@ -305,7 +305,7 @@ function Libary:CreateWindow(title)
 		UICorner_5.Parent = Tab1
 
 		MainBtnFrame.Name = Description
-		MainBtnFrame.Parent = BGR
+		MainBtnFrame.Parent = Frames
 		MainBtnFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 		MainBtnFrame.BackgroundTransparency = 1.000
 		MainBtnFrame.Position = UDim2.new(0, 0, 0.0414507762, 0)
