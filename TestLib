@@ -17,6 +17,7 @@ local UITextSizeConstraint_2 = Instance.new("UITextSizeConstraint")
 local ListFrame = Instance.new("Frame")
 local UICorner_4 = Instance.new("UICorner")
 local UIListLayout_2 = Instance.new("UIListLayout")
+local Frames = Instance.new("Folder")
 
 
 function Libary:CreateLoadingScreen(title, MainGui, MainTweenSize)
@@ -185,7 +186,7 @@ end
 
 function Libary:CreateWindow(title)
 	print(title)
-	
+
 	LibUIMS.Name = "LibUIMS"
 	LibUIMS.Parent = game.CoreGui
 	LibUIMS.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
@@ -211,6 +212,8 @@ function Libary:CreateWindow(title)
 
 	UICorner_2.CornerRadius = UDim.new(0, 6)
 	UICorner_2.Parent = BGR
+	
+	Frames.Parent = BGR
 
 	BGL.Name = "BGL"
 	BGL.Parent = BG1
@@ -251,7 +254,7 @@ function Libary:CreateWindow(title)
 
 	UITextSizeConstraint_2.Parent = UITitle
 	UITextSizeConstraint_2.MaxTextSize = 13
-	
+
 	ListFrame.Name = "ListFrame"
 	ListFrame.Parent = BGL
 	ListFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -266,12 +269,16 @@ function Libary:CreateWindow(title)
 	UIListLayout_2.HorizontalAlignment = Enum.HorizontalAlignment.Center
 	UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
 	UIListLayout_2.Padding = UDim.new(0.0399999991, 0)
-	
+
 	local FunctionsLib = {}
-	
+
 	function FunctionsLib:CreateTab(Description)
 		local Tab1 = Instance.new("TextButton")
 		local UICorner_5 = Instance.new("UICorner")
+		local MainBtnFrame = Instance.new("ScrollingFrame")
+		local UIListLayout = Instance.new("UIListLayout")
+		local TestFrameBtn = Instance.new("TextButton")
+		local UICorner_2 = Instance.new("UICorner")
 
 		Tab1.Name = "Tab1"
 		Tab1.Parent = ListFrame
@@ -283,10 +290,41 @@ function Libary:CreateWindow(title)
 		Tab1.TextScaled = true
 		Tab1.TextSize = 14.000
 		Tab1.TextWrapped = true
+		Tab1.MouseButton1Click:Connect(function()
+			for i, v in pairs(Frames) do
+				v.Visible = false
+			end
+			MainBtnFrame.Visible = true
+		end)
 
 		UICorner_5.Parent = Tab1
+		
+		MainBtnFrame.Name = "MainBtnFrame"
+		MainBtnFrame.Parent = Frames
+		MainBtnFrame.Active = true
+		MainBtnFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		MainBtnFrame.BackgroundTransparency = 1.000
+		MainBtnFrame.Size = UDim2.new(1, 0, 1, 0)
+		MainBtnFrame.ScrollBarThickness = 0
+
+		UIListLayout.Parent = MainBtnFrame
+		UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+		UIListLayout.Padding = UDim.new(0.0199999996, 0)
+
+		TestFrameBtn.Name = "TestFrameBtn"
+		TestFrameBtn.Parent = MainBtnFrame
+		TestFrameBtn.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		TestFrameBtn.Size = UDim2.new(1, 0, 0.0870466307, 0)
+		TestFrameBtn.Font = Enum.Font.SourceSans
+		TestFrameBtn.Text = "Test"
+		TestFrameBtn.TextColor3 = Color3.fromRGB(0, 0, 0)
+		TestFrameBtn.TextSize = 14.000
+
+		UICorner_2.CornerRadius = UDim.new(0, 6)
+		UICorner_2.Parent = MainBtnFrame
+		
 	end
-	
+
 	return FunctionsLib
 end
 
