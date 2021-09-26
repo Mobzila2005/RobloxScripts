@@ -214,6 +214,7 @@ function Libary:CreateWindow(title)
 	UICorner_2.Parent = BGR
 	
 	Frames.Parent = BGR
+	Frames.Name = "Frames"
 
 	BGL.Name = "BGL"
 	BGL.Parent = BG1
@@ -294,6 +295,7 @@ function Libary:CreateWindow(title)
 			for i, v in pairs(Frames) do
 				v.Visible = false
 			end
+			wait(0.1)
 			MainBtnFrame.Visible = true
 		end)
 
