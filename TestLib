@@ -213,7 +213,7 @@ function Libary:CreateWindow(title)
 
 	UICorner_2.CornerRadius = UDim.new(0, 6)
 	UICorner_2.Parent = BGR
-	
+
 	Frames.Parent = BGR
 	Frames.Name = "Frames"
 
@@ -272,9 +272,11 @@ function Libary:CreateWindow(title)
 	UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
 	UIListLayout_2.Padding = UDim.new(0.0399999991, 0)
 
-	
+
 
 	function Window:CreateTab(Description)
+		local Tab = {}
+		
 		
 		local Tab1 = Instance.new("TextButton")
 		local UICorner_5 = Instance.new("UICorner")
@@ -303,7 +305,7 @@ function Libary:CreateWindow(title)
 		end)
 
 		UICorner_5.Parent = Tab1
-		
+
 		MainBtnFrame.Name = "MainBtnFrame"
 		MainBtnFrame.Parent = Frames
 		MainBtnFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -328,6 +330,8 @@ function Libary:CreateWindow(title)
 		UICorner_2.CornerRadius = UDim.new(0, 6)
 		UICorner_2.Parent = MainBtnFrame
 		
+		
+		return Tab
 	end
 
 	return Window
