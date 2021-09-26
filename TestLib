@@ -215,6 +215,7 @@ function Libary:CreateWindow(title)
 	UICorner_2.Parent = BGR
 	
 	Frames.Parent = BGR
+	Frames.Name = "Frames"
 
 	BGL.Name = "BGL"
 	BGL.Parent = BG1
@@ -305,11 +306,11 @@ function Libary:CreateWindow(title)
 		
 		MainBtnFrame.Name = "MainBtnFrame"
 		MainBtnFrame.Parent = Frames
-		MainBtnFrame.Active = true
 		MainBtnFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 		MainBtnFrame.BackgroundTransparency = 1.000
 		MainBtnFrame.Size = UDim2.new(1, 0, 1, 0)
 		MainBtnFrame.ScrollBarThickness = 0
+		MainBtnFrame.Visible = false
 
 		UIListLayout.Parent = MainBtnFrame
 		UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
