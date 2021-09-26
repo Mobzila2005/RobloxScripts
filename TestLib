@@ -299,9 +299,11 @@ function Libary:CreateWindow(title)
 			for i, v in pairs(Frames) do
 				if v.Visible == true then
 					v.Visible = false
+					print(v)
 				end
 			end
 			Frames:FindFirstChild(Description).Visible = true
+			print(Frames:FindFirstChild(Description).Visible)
 		end)
 
 		UICorner_5.Parent = Tab1
