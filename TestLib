@@ -318,7 +318,7 @@ function Libary:CreateWindow(title)
 		TestFrameBtn.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 		TestFrameBtn.Size = UDim2.new(1, 0, 0.0870466307, 0)
 		TestFrameBtn.Font = Enum.Font.SourceSans
-		TestFrameBtn.Text = "Test"
+		TestFrameBtn.Text = Description
 		TestFrameBtn.TextColor3 = Color3.fromRGB(0, 0, 0)
 		TestFrameBtn.TextSize = 14.000
 
