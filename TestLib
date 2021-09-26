@@ -302,8 +302,8 @@ function Libary:CreateWindow(title)
 					print(v)
 				end
 			end
-			Frames:FindFirstChild(Description).Visible = true
-			print(Frames:FindFirstChild(Description).Visible)
+			Frames:WaitForChild(Description).Visible = true
+			print(Frames:WaitForChild(Description).Visible)
 		end)
 
 		UICorner_5.Parent = Tab1
