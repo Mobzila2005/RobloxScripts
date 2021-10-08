@@ -427,6 +427,132 @@ function Libary:CreateWindow(title)
 			UITextSizeConstraint_2.MaxTextSize = 30
 		end
 		
+		function Tab:CreateDropdown(text, list, callback)
+			callback = callback or function() end
+			list = list or {}
+			text = text or ""
+			
+			local DropYSize = 0
+			local IsDropped = false
+			
+			local Dropdown = Instance.new("Frame")
+			local DropdownContainer = Instance.new("Frame")
+			local UICorner = Instance.new("UICorner")
+			local UICorner_2 = Instance.new("UICorner")
+			local DropdownToggle = Instance.new("TextButton")
+			local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
+			local DropdownText = Instance.new("TextLabel")
+			local UITextSizeConstraint_2 = Instance.new("UITextSizeConstraint")
+			local UIListLayout = Instance.new("UIListLayout")
+			
+			Dropdown.Name = "Dropdown"
+			Dropdown.Parent = MainBtnFrame
+			Dropdown.BackgroundColor3 = Color3.fromRGB(65, 65, 65)
+			Dropdown.Size = UDim2.new(0.930999994, 0, 0.0710000023, 0)
+
+			DropdownContainer.Name = "DropdownContainer"
+			DropdownContainer.Parent = Dropdown
+			DropdownContainer.BackgroundColor3 = Color3.fromRGB(65, 65, 65)
+			DropdownContainer.Position = UDim2.new(0.0226342697, 0, 1.08815575, 0)
+			DropdownContainer.Size = UDim2.new(0.958161116, 0, 0, 0)
+			DropdownContainer.ClipsDescendants = true
+			
+			UIListLayout.Parent = DropdownContainer
+			UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+			UIListLayout.Padding = UDim.new(0.0199999996, 0)
+
+			UICorner.CornerRadius = UDim.new(0, 6)
+			UICorner.Parent = DropdownContainer
+
+			UICorner_2.CornerRadius = UDim.new(0, 6)
+			UICorner_2.Parent = Dropdown
+
+			DropdownToggle.Name = "DropdownToggle"
+			DropdownToggle.Parent = Dropdown
+			DropdownToggle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			DropdownToggle.BackgroundTransparency = 1.000
+			DropdownToggle.Position = UDim2.new(0.841994882, 0, 0, 0)
+			DropdownToggle.Size = UDim2.new(0.158005267, 0, 1, 0)
+			DropdownToggle.Font = Enum.Font.SourceSans
+			DropdownToggle.Text = "+"
+			DropdownToggle.TextColor3 = Color3.fromRGB(255, 255, 255)
+			DropdownToggle.TextScaled = true
+			DropdownToggle.TextSize = 30.000
+			DropdownToggle.TextWrapped = true
+			DropdownToggle.MouseButton1Click:Connect(function()
+				if IsDropped then
+					IsDropped = false
+					DropdownContainer.Size = UDim2.new(0.958161116, 0, 0, 0)
+					DropdownToggle.Text = "+"
+				else
+					IsDropped = true
+					DropdownContainer.Size = UDim2.new(0.958161116, 0, 0, DropYSize)
+					DropdownToggle.Text = "-"
+				end
+			end)
+
+			UITextSizeConstraint.Parent = DropdownToggle
+			UITextSizeConstraint.MaxTextSize = 30
+
+			DropdownText.Name = "DropdownText"
+			DropdownText.Parent = Dropdown
+			DropdownText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			DropdownText.BackgroundTransparency = 1.000
+			DropdownText.Size = UDim2.new(0.841560185, 0, 1, 0)
+			DropdownText.Font = Enum.Font.SourceSans
+			DropdownText.Text = " "..text
+			DropdownText.TextColor3 = Color3.fromRGB(255, 255, 255)
+			DropdownText.TextScaled = true
+			DropdownText.TextSize = 30.000
+			DropdownText.TextStrokeTransparency = 0.500
+			DropdownText.TextWrapped = true
+			DropdownText.TextXAlignment = Enum.TextXAlignment.Left
+
+			UITextSizeConstraint_2.Parent = DropdownText
+			UITextSizeConstraint_2.MaxTextSize = 30
+			
+			for i, v in next, list do
+				local Option1 = Instance.new("TextButton")
+				local UICorner = Instance.new("UICorner")
+				local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
+				local UICorner_2 = Instance.new("UICorner")
+				
+				Option1.Name = "Option1"
+				Option1.Parent = DropdownContainer
+				Option1.Active = false
+				Option1.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
+				Option1.Position = UDim2.new(2.88361974e-07, 0, 0, 0)
+				Option1.Size = UDim2.new(1, 0, 0.59799999, 0)
+				Option1.Font = Enum.Font.SourceSans
+				Option1.TextColor3 = Color3.fromRGB(255, 255, 255)
+				Option1.TextScaled = true
+				Option1.TextSize = 30.000
+				Option1.TextStrokeTransparency = 0.500
+				Option1.TextWrapped = true
+				Option1.TextXAlignment = Enum.TextXAlignment.Left
+				Option1.Text = v
+
+				UICorner.CornerRadius = UDim.new(0, 6)
+				UICorner.Parent = Option1
+
+				UITextSizeConstraint.Parent = Option1
+				UITextSizeConstraint.MaxTextSize = 30
+
+				UICorner_2.CornerRadius = UDim.new(0, 6)
+				UICorner_2.Parent = DropdownContainer
+				
+				DropYSize = DropYSize + 0.59799999
+				
+				Option1.MouseButton1Click:Connect(function()
+					DropdownText.Text = " "..text
+					callback(v)
+					IsDropped = false
+					DropdownContainer.Size = UDim2.new(0.958161116, 0, 0, 0)
+					DropdownToggle.Text = "+"
+				end)
+			end
+		end
+		
 		return Tab
 	end
 
