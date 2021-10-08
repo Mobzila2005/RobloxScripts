@@ -365,6 +365,7 @@ function Libary:CreateWindow(title)
 			NormalButton.TextSize = 14.000
 			NormalButton.TextStrokeTransparency = 0.500
 			NormalButton.TextWrapped = true
+			NormalButton.TextXAlignment = Enum.TextXAlignment.Left
 			NormalButton.MouseButton1Click:Connect(function()
 				pcall(callback)
 			end)
@@ -454,7 +455,7 @@ function Libary:CreateWindow(title)
 			DropdownContainer.Parent = Dropdown
 			DropdownContainer.BackgroundColor3 = Color3.fromRGB(65, 65, 65)
 			DropdownContainer.Position = UDim2.new(0.0226342697, 0, 1.08815575, 0)
-			DropdownContainer.Size = UDim2.new(0.958161116, 0, 0, 0)
+			DropdownContainer.Size = UDim2.new(0.958161116, 0, DropYSize, 0)
 			DropdownContainer.ClipsDescendants = true
 			
 			UIListLayout.Parent = DropdownContainer
