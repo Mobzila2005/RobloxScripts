@@ -542,7 +542,7 @@ function Libary:CreateWindow(title)
 				UICorner_2.CornerRadius = UDim.new(0, 6)
 				UICorner_2.Parent = DropdownContainer
 				
-				DropdownContainer.Size = DropdownContainer.Size + 0.6
+				DropdownContainer.Size = DropdownContainer.Size + UDim2.new(0, 0, 0.6, 0)
 				
 				Option1.MouseButton1Click:Connect(function()
 					DropdownText.Text = " "..text
