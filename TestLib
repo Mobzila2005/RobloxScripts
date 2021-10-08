@@ -523,7 +523,7 @@ function Libary:CreateWindow(title)
 				Option1.Active = false
 				Option1.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
 				Option1.Position = UDim2.new(2.88361974e-07, 0, 0, 0)
-				Option1.Size = UDim2.new(1, 0, 0.59799999, 0)
+				Option1.Size = UDim2.new(1, 0, 0.6, 0)
 				Option1.Font = Enum.Font.SourceSans
 				Option1.TextColor3 = Color3.fromRGB(255, 255, 255)
 				Option1.TextScaled = true
@@ -542,7 +542,7 @@ function Libary:CreateWindow(title)
 				UICorner_2.CornerRadius = UDim.new(0, 6)
 				UICorner_2.Parent = DropdownContainer
 				
-				DropYSize = DropYSize + 0.59799999
+				DropdownContainer.Size = DropdownContainer.Size + 0.6
 				
 				Option1.MouseButton1Click:Connect(function()
 					DropdownText.Text = " "..text
